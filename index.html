@@ -872,6 +872,40 @@ table.data tbody tr.spacer td{padding:3px; border:0; background:transparent;}
 ::-webkit-scrollbar-track{background:var(--gray-100);}
 ::-webkit-scrollbar-thumb{background:var(--gray-300); border-radius:4px;}
 ::-webkit-scrollbar-thumb:hover{background:var(--gray-400);}
+
+/* ═════════════════════════════════════════════════════════ */
+/* RESPONSIVE — mejoras adicionales para móvil               */
+/* ═════════════════════════════════════════════════════════ */
+
+/* Panel-head: evitar desbordamiento en pantallas angostas */
+@media (max-width:680px){
+  .panel-head{flex-wrap:wrap;}
+}
+
+/* Dispositivos pequeños (≤ 480px) */
+@media (max-width:480px){
+  html{font-size:13px;}
+  .container{padding:10px 10px 40px;}
+  .header{padding:16px 18px; border-radius:14px;}
+  .exec-summary{gap:10px;}
+  .exec-summary-icon{display:none;}
+  .kpi-value{font-size:19px;}
+  .kpi-value.small{font-size:17px;}
+  .kpi{padding:14px 14px 12px;}
+  .panel-body{padding:16px;}
+  .panel-head{padding:14px 16px;}
+  .client-total .amount{font-size:15px;}
+  .footer-meta{text-align:left;}
+}
+
+/* Dispositivos muy pequeños (≤ 400px) */
+@media (max-width:400px){
+  .kpi-grid{grid-template-columns:1fr;}
+  .client-row{grid-template-columns:28px 1fr auto; gap:8px;}
+  .client-name{font-size:12px;}
+  .client-amount .val{font-size:12px;}
+  .client-amount .pct{font-size:10px;}
+}
 </style>
 </head>
 <body>
